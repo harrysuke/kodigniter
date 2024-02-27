@@ -8,12 +8,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         User
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?= base_url('user-list')?>">User list</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('user-form')?>">New user</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('user-list') ?>">User list</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('user-form') ?>">New user</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -22,12 +23,13 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         Product
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?= base_url('product-list')?>">Product list</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('product-form')?>">New product</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('product-list') ?>">Product list</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('product-form') ?>">New product</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -43,6 +45,13 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('faqs') ?>">Faqs</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= site_url('/signout')?>">
+                        <span class="glyphicon glyphicon-user"></span> Sign out
+                    </a>
                 </li>
             </ul>
         </div>

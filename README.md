@@ -16,7 +16,7 @@ corresponding to the latest version of the framework.
 
 ## Installation & updates
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
+`composer create-project codeigniter4/appstarter kodigniter` then `composer update` whenever
 there is a new release of the framework.
 
 When updating, check the release notes to see if there are any changes you might need to apply
@@ -27,6 +27,22 @@ to your `app` folder. The affected files can be copied or merged from
 
 Copy `env` to `.env` and tailor for your app, specifically the baseURL
 and any database settings.
+
+**Hide index.php**
+
+Add .htaccess to the root folder:
+
+> RewriteEngine On
+> 
+> RewriteCond %{REQUEST_FILENAME} !-f
+> 
+> RewriteCond %{REQUEST_FILENAME} !-d
+> 
+> RewriteRule ^(.*)$ index.php/$1 [L] 
+
+Open `app\Config\App.php` removed index.php from $indexPage
+
+`public string $indexPage = '';`
 
 ## Important Change with index.php
 

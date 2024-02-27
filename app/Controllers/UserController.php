@@ -22,7 +22,7 @@ class UserController extends Controller{
 			'email' => $this->request->getVar('email'),
 		];
 		$userModel->insert($data);
-		return $this->response->redirect(site_url('/user-list'));
+		return $this->response->redirect(site_url('user-list'));
 	}
 	
 	public function singleUser($id = null){
@@ -39,12 +39,12 @@ class UserController extends Controller{
 			'email' => $this->request->getVar('email'),
 		];
 		$userModel->update($id, $data);
-		return $this->response->redirect('site_url'('/user-list'));
+		return $this->response->redirect('site_url'('user-list'));
 	}
 	
 	public function delete($id = null){
 		$userModel = new UserModel();
 		$data['user'] = $userModel->where('id', $id)->delete($id);
-		return $this->response->redirect(site_url('/user-list'));
+		return $this->response->redirect(site_url('user-list'));
 	}
 }

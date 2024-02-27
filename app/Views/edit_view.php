@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Codeigniter 4 CRUD - Edit User Demo</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <style>
+<?= $this->extend('layout/page_layout') ?>
+
+<?= $this->section('content') ?>
+
+<style>
     .container {
-      max-width: 500px;
     }
     .error {
       display: block;
@@ -14,8 +12,7 @@
       color: red;
     }
   </style>
-</head>
-<body>
+
   <div class="container mt-5">
     <form method="post" id="update_user" name="update_user" 
     action="<?= site_url('/update') ?>">
@@ -62,5 +59,5 @@
       })
     }
   </script>
-</body>
-</html>
+
+<?= $this->endSection() ?>

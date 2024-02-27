@@ -1,14 +1,9 @@
 <!-- add_product.php -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <title>Add Product</title>
-</head>
-<body>
+<?= $this->extend('layout/page_layout') ?>
+
+<?= $this->section('content') ?>
+
 <div class="container mt-5">
     <h1>Add Product</h1>
     <form method="post" action="<?= site_url('submit-product') ?>">
@@ -27,5 +22,5 @@
         <button type="submit" class="btn btn-primary btn-block">Add Product</button>
     </form>
 </div>
-</body>
-</html>
+
+<?= $this->endSection() ?>

@@ -28,10 +28,12 @@
              <td><?php echo $user['id']; ?></td>
              <td><?php echo $user['name']; ?></td>
              <td><?php echo $user['email']; ?></td>
+             <?php if (session()->get('isLoggedIn')) : ?>
              <td width="10%">
               <a href="<?php echo base_url('edit-view/'.$user['id']);?>" class="btn btn-primary btn-sm">Edit</a>
               <a href="<?php echo base_url('delete/'.$user['id']);?>" class="btn btn-danger btn-sm">Delete</a>
               </td>
+              <?php endif; ?>
           </tr>
          <?php endforeach; ?>
          <?php endif; ?>

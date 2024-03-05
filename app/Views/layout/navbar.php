@@ -49,13 +49,31 @@
                     <a class="nav-link" href="<?= base_url('faqs') ?>">Faqs</a>
                 </li>
             </ul>
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('/signout')?>">
-                        <span class="glyphicon glyphicon-user"></span> Sign out
-                    </a>
-                </li>
-            </ul>
         </div>
+        <?php if (session()->get('isLoggedIn')) : ?>
+        <div class="d-flex align-items-center">
+            <form class="w-100 me-3" role="search">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+
+            <div class="flex-shrink-0 dropdown">
+                <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#"><?= ucwords(session()->get('name'));?></a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="<?= site_url('/signout') ?>">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+        <?php else: ?>
+            <a class="btn btn-outline-primary" href="<?= site_url('/signin') ?>">Sign in</a>
+        <?php endif; ?>
     </div>
 </nav>

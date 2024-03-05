@@ -26,7 +26,9 @@
         <input type="email" name="email" class="form-control" value="<?php echo $user_obj['email']; ?>">
       </div>
       <div class="form-group">
+      <?php if (session()->get('isLoggedIn')) : ?>
         <button type="submit" class="btn btn-danger btn-block">Save Data</button>
+        <?php endif; ?>
       </div>
     </form>
   </div>

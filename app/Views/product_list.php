@@ -26,10 +26,12 @@
             <td><?php echo $product->name; ?></td>
             <td><?php echo $product->price; ?></td>
             <td><?php echo $product->quantity; ?></td>
+            <?php if (session()->get('isLoggedIn')) : ?>
             <td width="10%">
               <a href="<?php echo base_url('edit-product/'.$product->id);?>" class="btn btn-primary btn-sm">Edit</a>
               <a href="<?php echo base_url('delete-product/'.$product->id);?>" class="btn btn-danger btn-sm">Delete</a>
             </td>
+            <?php endif; ?>
         </tr>
         <?php endforeach; ?>
         <?php endif; ?>

@@ -19,7 +19,9 @@
             <label for="quantity">Quantity:</label>
             <input type="number" id="quantity" name="quantity" class="form-control" required>
         </div>
+        <?php if (session()->get('isLoggedIn')) : ?>
         <button type="submit" class="btn btn-primary btn-block">Add Product</button>
+        <?php endif; ?>
     </form>
 </div>
 

@@ -24,7 +24,9 @@
         <input type="text" name="email" class="form-control">
       </div>
       <div class="form-group">
+      <?php if (session()->get('isLoggedIn')) : ?>
         <button type="submit" class="btn btn-primary btn-block">Submit Data</button>
+        <?php endif; ?>
       </div>
     </form>
   </div>

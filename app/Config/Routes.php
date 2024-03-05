@@ -28,3 +28,6 @@ $routes->post('submit-product', 'ProductController::storeProduct');
 $routes->get('edit-product/(:num)', 'ProductController::singleProduct/$1');
 $routes->post('update-product', 'ProductController::updateProduct');
 $routes->get('delete-product/(:num)', 'ProductController::deleteProduct/$1');
+
+$routes->resource('apicontroller');
+$routes->get('/api','ApiController::api');

@@ -44,6 +44,10 @@ Open `app\Config\App.php` removed index.php from $indexPage
 
 `public string $indexPage = '';`
 
+**To run the application**
+
+`php spark serve`
+
 ## Important Change with index.php
 
 `index.php` is no longer in the root of the project! It has been moved inside the *public* folder,

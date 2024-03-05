@@ -36,7 +36,9 @@
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('api') ?>">API</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('about') ?>">About</a>
                 </li>
